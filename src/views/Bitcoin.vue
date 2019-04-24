@@ -6,8 +6,8 @@
                 <img v-else style="height: 18rem; width: 100%" class="card-img-top" src="../assets/notfound.png">
                 <div class="card-body">
 
-                    <h2 class="card-title"> {{phone.companyName}} </h2>
-                    <h5 class="card-text"> {{phone.phoneName}} </h5>
+                    <h2 class="card-title"> {{ phone.companyName }} </h2>
+                    <h5 class="card-text"> {{ phone.phoneName }} </h5>
                     
                     <p v-if="phone.price <= 0" class="card-text"> $ <a style="color: lime" class="font-weight-bold"><em>GRATIS</em></a> </p>
                     <p v-else class="card-text"> $ <a style="color: lime" class="font-weight-bold">{{phone.price}}</a> </p>
