@@ -1,15 +1,19 @@
 <template>
-  <div id="app">
+  <div class="app container">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">HJEM</router-link> |
+      <router-link to="/about">OM OS</router-link> |
+      <router-link to="/ProductsComponent">PRODUKTER</router-link> |
+      <router-link to="/BasketComponent">KURV</router-link> |
+      <router-link to="/Bitcoin">PRODUKTER V.2</router-link> |
+      <router-link to="/Create">CREATE</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
