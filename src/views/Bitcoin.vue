@@ -1,8 +1,8 @@
 <template>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-3 mb-5 text-left" v-for="phone in info">
             <div style="width: 14rem" class="card grow-shadow p-1">
-                <img v-if="phone.phonePhoto != null" style="height: 16rem; width: 100%" class="card-img-top" :src="phone.phonePhoto">
+                <img v-if="phone.phonePhoto != null && phone.phonePhoto != 'abc'" style="height: 16rem; width: 100%" class="card-img-top" :src="phone.phonePhoto">
                 <img v-else style="height: 15rem; width: 100%" class="card-img-top" src="../assets/notfound.png">
                 <div class="card-body">
 
