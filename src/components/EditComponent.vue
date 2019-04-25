@@ -53,6 +53,16 @@ export default {
             }
         }
     },
+    mounted () {
+        axios
+            .get(`http://localhost:60014/api/shop/${this.$route.params.id}`)
+            .then(respone => {
+                this.phone1.phoneName = respone.data[0].phoneName,
+                this.phone1.companyID = respone.data[0].companyID,
+                this.phone1.price = respone.data[0].price,
+                this.phone1.photo.phonePhoto = respone.data[0].phonePhoto
+                })
+    },
     methods: {
         edit: function () { 
             this.$validator.validate().then(valid => {
