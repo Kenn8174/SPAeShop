@@ -2,8 +2,8 @@
     <div class="text-left justify-content-center row">
         <div class="col-3 mb-5" v-for="phone in info">
             <div class="card grow-shadow" style="width: 14rem">
-                <img v-if="phone.phonePhoto != null" style="height: 16rem; width: 100%" class="card-img-top" :src="phone.phonePhoto">
-                <img v-else style="height: 17rem; width: 100%" class="card-img-top" src="../assets/notfound.png">
+                <img v-if="phone.phonePhoto != null && phone.phonePhoto != 'abc'" style="height: 16rem; width: 100%" class="card-img-top" :src="phone.phonePhoto">
+                <img v-else style="height: 16rem; width: 100%" class="card-img-top" src="../assets/notfound.png">
                 <div class="card-body">
                     
                     <h2 class="card-title"> {{phone.companyName}} </h2>
@@ -36,10 +36,14 @@ export default {
     },
     methods: {
         slet: function () {
-            confirm(`Er du sikker på at du vil slette denne telefon`)
+            if (confirm(`Er du sikker på at du vil slette denne telefon`)) {
                 axios
                     .delete(`http://localhost:60014/api/shop/${this.$route.params.id}`)
                     .then(window.location.replace('/Bitcoin'))
+            }
+            else {
+                
+            }
         }
     }
 }
