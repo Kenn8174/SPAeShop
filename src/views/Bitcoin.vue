@@ -1,9 +1,9 @@
 <template>
     <div class="row">
-        <div class="col-4 mb-5 text-left" v-for="phone in info">
-            <div style="width: 20rem" class="card grow-shadow">
-                <img v-if="phone.phonePhoto != null" style="height: 18rem; width: 100%" class="card-img-top" :src="phone.phonePhoto">
-                <img v-else style="height: 18rem; width: 100%" class="card-img-top" src="../assets/notfound.png">
+        <div class="col-3 mb-5 text-left" v-for="phone in info">
+            <div style="width: 14rem" class="card grow-shadow p-1">
+                <img v-if="phone.phonePhoto != null" style="height: 16rem; width: 100%" class="card-img-top" :src="phone.phonePhoto">
+                <img v-else style="height: 15rem; width: 100%" class="card-img-top" src="../assets/notfound.png">
                 <div class="card-body">
 
                     <h2 class="card-title"> {{ phone.companyName }} </h2>
